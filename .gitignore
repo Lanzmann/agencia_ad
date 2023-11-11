@@ -12,5 +12,4 @@
 /.env.production.local
 
 # build artifacts
-/*.js
 /*.map
