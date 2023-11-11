@@ -1,5 +1,4 @@
 import React from 'react'
-import Button from './Button'
 
 function Header() {
     return (
@@ -15,15 +14,15 @@ function Header() {
                 </div>
                 <div id="links" className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
                     <div className="text-sm lg:flex-grow">
-                        <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
+                        <button className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
                             Portfolio
-                        </a>
-                        <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
+                        </button>
+                        <button className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
                             Planos
-                        </a>
-                        <a href="#" className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white">
+                        </button>
+                        <button className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white">
                             Contato
-                        </a>
+                        </button>
                     </div>
                 </div>
             </nav>
