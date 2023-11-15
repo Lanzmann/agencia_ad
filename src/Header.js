@@ -1,32 +1,84 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+const HeaderContainer = styled.header`
+    nav {
+        display: flex;
+        height: 3.5rem;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: tomato;
+        padding: 6px;
+    }
+`
+
+const Logo = styled.div`
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+    margin-left: 0.5rem;
+
+    span {
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: white;
+        margin-left: 0.5rem;
+    }
+`
+
+const Links = styled.div`
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    .link {
+        display: block;
+        margin: 4px;
+        font-size: 1rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+
+        &:hover {
+            color: white;
+            font-weight: 900;
+        }
+    }
+
+    .separator {
+        color: white;
+        margin: 0 8px;
+    }
+`;
 
 function Header() {
     return (
-        <header>
-            <nav className="flex items-center justify-between flex-wrap bg-tomato p-6">
-                <div id="logo" className="flex items-center flex-shrink-0 text-white mr-6">
-                    <span className="font-semibold text-xl tracking-tight">ad.</span>
-                </div>
-                <div id="menu" className="block lg:hidden">
-                    <button className="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-white hover:border-white">
-                        <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-                    </button>
-                </div>
-                <div id="links" className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-                    <div className="text-sm lg:flex-grow">
-                        <button className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-                            Portfolio
-                        </button>
-                        <button className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
-                            Planos
-                        </button>
-                        <button className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-white">
-                            Contato
-                        </button>
-                    </div>
-                </div>
+        <HeaderContainer>
+            <nav>
+                <Logo>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" height="24" width="24">
+                        <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm0 18.75c-4.694 0-8.5-3.806-8.5-8.5S5.306 1.75 10 1.75s8.5 3.806 8.5 8.5-3.806 8.5-8.5 8.5z"/>
+                        <path d="M10 4.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM10 13.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/>
+                    </svg>
+                    <span>ad.</span>
+                </Logo>
+                <Links>
+                    <Link className="link" to="/portfolio">
+                        Portfolio
+                    </Link>
+                    <span className="separator">|</span>
+                    <Link className="link" to="/plans">
+                        Planos
+                    </Link>
+                    <span className="separator">|</span>
+                    <Link className="link" to="/contact">
+                        Contato
+                    </Link>
+                </Links>
             </nav>
-        </header>
+        </HeaderContainer>
     )
 }
 
