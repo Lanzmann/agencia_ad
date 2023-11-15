@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 const Main = styled.main`
   flex: 1 0 auto;
   width: 100%;
+  background-color: var(--tomato-light);
 `
 
 function App() {

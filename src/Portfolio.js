@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import React from "react"
+import styled from "styled-components"
+import { Carousel } from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css"
 
 const CarouselContainer = styled.div`
     display: flex;
@@ -15,7 +15,7 @@ const images = [
     "https://via.placeholder.com/1920x1080",
     "https://via.placeholder.com/1920x1080",
     "https://via.placeholder.com/1920x1080",
-];
+]
 
 const Portfolio = () => {
     return (
@@ -28,7 +28,7 @@ const Portfolio = () => {
                 ))}
             </Carousel>
         </CarouselContainer>
-    );
+    )
 }
 
-export default Portfolio;
+export default Portfolio

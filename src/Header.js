@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import TomatoIcon from './TomatoIcon';
 
 const HeaderContainer = styled.header`
     nav {
         display: flex;
-        height: 3.5rem;
+        height: 2.25rem;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        background-color: tomato;
+        background-color: var(--tomato);
         padding: 6px;
     }
 `
@@ -31,7 +32,7 @@ const Logo = styled.div`
 const Links = styled.div`
     display: flex;
     flex-grow: 1;
-    justify-content: flex-end;
+    justify-content: center;
 
     .link {
         display: block;
@@ -41,9 +42,14 @@ const Links = styled.div`
         text-decoration: none;
         font-weight: 700;
 
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.3s;
+    
         &:hover {
-            color: white;
-            font-weight: 900;
+            background-size: 100% 2px;
         }
     }
 
@@ -58,10 +64,7 @@ function Header() {
         <HeaderContainer>
             <nav>
                 <Logo>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" height="24" width="24">
-                        <path d="M10 0C4.477 0 0 4.477 0 10s4.477 10 10 10 10-4.477 10-10S15.523 0 10 0zm0 18.75c-4.694 0-8.5-3.806-8.5-8.5S5.306 1.75 10 1.75s8.5 3.806 8.5 8.5-3.806 8.5-8.5 8.5z"/>
-                        <path d="M10 4.75a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5zM10 13.25a1.25 1.25 0 100 2.5 1.25 1.25 0 000-2.5z"/>
-                    </svg>
+                    <TomatoIcon />
                     <span>ad.</span>
                 </Logo>
                 <Links>
@@ -81,5 +84,7 @@ function Header() {
         </HeaderContainer>
     )
 }
+
+
 
 export default Header

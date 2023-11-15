@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
         'tomato': '#FF6347',
+        'tomato-light': '#FFA07A',
         'gold': '#FFD700',
         'olive': '#808000',
         'teal': '#008080',
@@ -15,4 +16,6 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-}
+}/* FILEPATH: /e:/web/agencia_ad/styles.css */
+
+

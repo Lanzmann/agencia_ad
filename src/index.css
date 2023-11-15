@@ -1,7 +1,3 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
 body, html {
   margin: 0;
   padding: 0;
@@ -15,4 +11,13 @@ body, html {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root {
+  --tomato: #FF6347;
+  --tomato-light: #FF8670;
+  --gold: #FFD700;
+  --olive: #808000;
+  --teal: #008080;
+  --navy: #000080;
 }
